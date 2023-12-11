@@ -6,3 +6,6 @@ def index1(request):
 
 def index2(request):
     return render(request, 'index-slideshow.html', locals())
+
+def index3(request):
+    return render(request, 'blog.html', locals())
