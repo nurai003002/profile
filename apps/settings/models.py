@@ -55,3 +55,30 @@ class Slide(models.Model):
         verbose_name_plural = "Настройка"
 
     
+class AboutUs(models.Model):
+    title1 = models.CharField(
+        max_length = 255,
+        verbose_name = 'Название'
+    )
+    title2 = models.CharField(
+        max_length = 255,
+        verbose_name = 'Описание два'
+    )
+    descriptions1 = models.TextField(
+        verbose_name = "Описание1 About"
+    )
+    descriptions2 = models.TextField(
+        verbose_name = "Описание2 About"
+    )
+    about_image = models.ImageField(
+        upload_to='Photo1',
+        verbose_name='Фото для About'
+    )
+    manager = models.ImageField(
+        upload_to='photo2',
+        verbose_name='Фото2'
+    )
+    class Meta:
+        verbose_name = 'Настройки'
+        verbose_name_plural = "About us"
+
