@@ -47,7 +47,7 @@
     <!-- Preloader Starts -->
     <div class="preloader" id="preloader">
         <div class="logopreloader">
-            <img src="{{slide.one_page.url}}"  width = '200px' alt="logo-black">
+            <img src="{{settings.one_page.url}}"  width = '200px' alt="logo-black">
         </div>
         <div class="loader" id="loader"></div>
     </div>
@@ -55,7 +55,7 @@
     <!-- Live Style Switcher Starts - demo only -->
     <div id="switcher" class="">
         <div class="content-switcher">
-            <h4>STYLE SWITCHER</h4>
+            <h4>Стили</h4>
             <ul>
                 <li>
                     <a href="#" onclick="setActiveStyleSheet('blue'); document.getElementById('logo-light')".src='{% static "assets/img/styleswitcher/logos/blue.png" %}'; document.getElementById('logo-dark'). src='{% static "assets/img/styleswitcher/logos/logos-dark/blue.png" %}'; title="blue" class="color"><img src="{% static 'assets/img/styleswitcher/blue.png' %}" alt="" width="30" height="30" /></a>
@@ -89,20 +89,20 @@
                 </li>
             </ul>
 
-            <p>BODY SKIN</p>
+            <p>Скины</p>
 
-            <label><input class="dark_switch" type="radio" name="color_style" id="is_dark" value="dark"checked="checked" /> Dark</label>     
-            <label><input class="dark_switch" type="radio" name="color_style" id="is_light" value="light"  /> Light</label>
+            <label><input class="dark_switch" type="radio" name="color_style" id="is_dark" value="dark"checked="checked" /> Темный</label>     
+            <label><input class="dark_switch" type="radio" name="color_style" id="is_light" value="light"  /> Яркий</label>
 
             <hr />
 
             <p>LAYOUT STYLE</p>
-            <label><input class="boxed_switch" type="radio" name="layout_style" id="is_wide" value="wide" checked="checked" /> Wide</label>
-            <label><input class="boxed_switch" type="radio" name="layout_style" id="is_boxed" value="boxed" /> Boxed</label>
+            <label><input class="boxed_switch" type="radio" name="layout_style" id="is_wide" value="wide" checked="checked" /> широкий</label>
+            <label><input class="boxed_switch" type="radio" name="layout_style" id="is_boxed" value="boxed" /> В упаковке</label>
 
             <hr />
 
-            <p class="separator">SEPARATOR <span class="hot">HOT</span></p>
+            <p class="separator">РАЗДЕЛИТЕЛЬ <span class="hot"></span></p>
             <span class="info">Select and scroll to see the changes</span>
             <label><input class="separator_switch" type="radio" name="separator_style" id="is_normal" value="normal"  /> <img alt="separator" width="20" height="20" src="{% static 'assets/img/styleswitcher/separators/1.jpg' %}" /></label>
             <label><input class="separator_switch" type="radio" name="separator_style" id="is_skew" value="skew" /> <img alt="separator" width="20" height="20" src="{% static 'assets/img/styleswitcher/separators/2.jpg' %}" /></label>
@@ -130,10 +130,10 @@
                     <div class="logo">
                         <a data-toggle="collapse" data-target=".navbar-collapse.show" class="navbar-brand link-menu scroll-to-target" href="#mainslider">
                             <!-- Logo White Starts -->
-                            <img id="logo-light" class="logo-light" src="{{slide.logo.url}}"  alt="logo-light" />
+                            <img id="logo-light" class="logo-light" src="{{settings.logo.url}}"  alt="logo-light" />
                             <!-- Logo White Ends -->
                             <!-- Logo Black Starts -->
-                            <img id="logo-dark" class="logo-dark" src="{{slide.logo.url}}"   alt="logo-dark" />
+                            <img id="logo-dark" class="logo-dark" src="{{settings.logo.url}}"   alt="logo-dark" />
                             <!-- Logo Black Ends -->
                         </a>
                     </div>
@@ -174,18 +174,18 @@
                 <div id="rev_slider" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
                     <ul>
                         <!-- SLIDE  -->
-                        {% for settings in settings%}
-                        <li  data-transition="boxslide" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="{{settings.image.url}}" data-rotate="0" data-fsmasterspeed="300" data-fsslotamount="7" data-saveperformance="off" data-title="Intro" data-description="">
+                        {% for slide in slide%}
+                        <li  data-transition="boxslide" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="{{slide.image.url}}" data-rotate="0" data-fsmasterspeed="300" data-fsslotamount="7" data-saveperformance="off" data-title="Intro" data-description="">
                             <!-- MAIN IMAGE -->
-                            <img src="{{settings.image.url}}" alt="" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            <img src="{{slide.image.url}}" alt="" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
                             <!-- LAYERS -->
 
                             <!-- LAYER NR. 1 -->
-                            <div class="tp-caption NotGeneric-Title   tp-resizeme rs-parallaxlevel-0" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-fontsize="['70','70','70','45']" data-lineheight="['70','70','70','50']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="chars" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 5; white-space: nowrap;">{{settings.name}}
+                            <div class="tp-caption NotGeneric-Title   tp-resizeme rs-parallaxlevel-0" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-fontsize="['70','70','70','45']" data-lineheight="['70','70','70','50']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="chars" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 5; white-space: nowrap;">{{slide.name}}
                             </div>
 
                             <!-- LAYER NR. 2 -->
-                            <div class="tp-caption NotGeneric-SubTitle   tp-resizeme rs-parallaxlevel-0 nowrap-normal text-center px-15" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['70','70','70','70']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1500" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 6; white-space: nowrap;">{{settings.descriptions}}
+                            <div class="tp-caption NotGeneric-SubTitle   tp-resizeme rs-parallaxlevel-0 nowrap-normal text-center px-15" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['70','70','70','70']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1500" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 6; white-space: nowrap;">{{slide.descriptions}}
                             </div>
 
                             <!-- LAYER NR. 3 -->
@@ -332,85 +332,39 @@
                 <!-- Services Starts -->
                 <div class="row services-box">
                     <!-- Service Item Starts -->
+                    {% for service in service %}
                     <div class="col-lg-4 col-md-12 col-sm-12 services-box-item">
                         <!-- Service Item Cover Starts -->
-                        <span class="services-box-item-cover fa fa-leaf" data-headline="Creative Solutions"></span>
+                        <span class="services-box-item-cover fa fa-leaf" data-headline="{{service.name}}"></span>
                         <!-- Service Item Cover Ends -->
                         <!-- Service Item Content Starts -->
                         <div class="services-box-item-content fa fa-leaf">
-                            <h2>Creative Solutions</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
+                            <h2>{{service.title}}</h2>
+                            <p>{{service.description}}</p>
                         </div>
                         <!-- Service Item Content Ends -->
                     </div>
+                    {% endfor %}
                     <!-- Service Item Ends -->
 
                     <!-- Service Item Starts -->
-                    <div class="col-lg-4 col-md-12 col-sm-12 services-box-item">
-                        <!-- Service Item Cover Starts -->
-                        <span class="services-box-item-cover fa fa-anchor" data-headline="Featured Services"></span>
-                        <!-- Service Item Cover Ends -->
-                        <!-- Service Item Content Starts -->
-                        <div class="services-box-item-content fa fa-anchor">
-                            <h2>Featured Services</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
-                        </div>
-                        <!-- Service Item Content Ends -->
-                    </div>
+                    
                     <!-- Service Item Ends -->
 
                     <!-- Service Item Starts -->
-                    <div class="col-lg-4 col-md-12 col-sm-12 services-box-item">
-                        <!-- Service Item Cover Starts -->
-                        <span class="services-box-item-cover fa fa-comments-o" data-headline="Custom Design"></span>
-                        <!-- Service Item Cover Ends -->
-                        <!-- Service Item Content Starts -->
-                        <div class="services-box-item-content fa fa-comments-o">
-                            <h2>Custom Design</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
-                        </div>
-                        <!-- Service Item Content Ends -->
-                    </div>
+                    
                     <!-- Service Item Ends -->
 
                     <!-- Service Item Starts -->
-                    <div class="col-lg-4 col-md-12 col-sm-12 services-box-item">
-                        <!-- Service Item Cover Starts -->
-                        <span class="services-box-item-cover fa fa-support" data-headline="Technical Support"></span>
-                        <!-- Service Item Cover Ends -->
-                        <div class="services-box-item-content fa fa-support">
-                            <h2>Technical Support</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
-                        </div>
-                    </div>
+                    
                     <!-- Service Item Ends -->
 
                     <!-- Service Item Starts -->
-                    <div class="col-lg-4 col-md-12 col-sm-12 services-box-item">
-                        <!-- Service Item Cover Starts -->
-                        <span class="services-box-item-cover fa fa-cogs" data-headline="Responsive Design"></span>
-                        <!-- Service Item Cover Ends -->
-                        <!-- Service Item Content Starts -->
-                        <div class="services-box-item-content fa fa-cogs">
-                            <h2>Responsive Design</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
-                        </div>
-                        <!-- Service Item Content Ends -->
-                    </div>
+                   
                     <!-- Service Item Ends -->
 
                     <!-- Service Item Starts -->
-                    <div class="col-lg-4 col-md-12 col-sm-12 services-box-item">
-                        <!-- Service Item Cover Starts -->
-                        <span class="services-box-item-cover fa fa-file-pdf-o" data-headline="Well Documented"></span>
-                        <!-- Service Item Cover Ends -->
-                        <!-- Service Item Content Starts -->
-                        <div class="services-box-item-content fa fa-file-pdf-o">
-                            <h2>Well Documented</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
-                        </div>
-                        <!-- Service Item Content Ends -->
-                    </div>
+                    
                     <!-- Service Item Ends -->
 
                 </div>
@@ -445,9 +399,9 @@
                             <div class="carousel-item active">
                                 <blockquote>
                                     <img class="rounded-circle img-fluid" src="{% static 'assets/img/testimonial/client2.jpg' %}" alt="client">
-                                    <p>asdfghj</p>
-                                    <h5>adsfghj</h5>
-                                    <h6>sadfghj</h6>
+                                    <p>Нурболот</p>
+                                    <h5>очень хорошо и хорошо</h5>
+                                    <h6>Backend-devoloper</h6>
                                 </blockquote>
                             </div>
                             <!-- Quote #1 Ends -->
@@ -496,157 +450,33 @@
                 <nav>
                     <ul class="simplefilter nav nav-pills d-block">
                         <!-- Filter Wrapper Items Starts -->
-                        <li class="active" data-filter="all"><i class="fa fa-reorder"></i>Все проекты</li>
+                        <li class="active" data-filter="all"><i class="fa fa-reorder"></i>Наши проекты</li>
                         <li data-filter="1">Фото</li>
-                        <li data-filter="2">Видео</li>
-                        <li data-filter="3">Ссылки</li>
                         <!-- Filter Wrapper Items Ends -->
                     </ul>
                 </nav>
                 <!-- Filter Wrapper Ends -->
                 <div>
                     <div class="filtr-container">
+                        {% for portfolio in portfolio %}
                         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 filtr-item" data-category="1">
                             <div class="magnific-popup-gallery">
                                 <!-- Thumbnail Starts -->
+
                                 <figure class="thumbnail thumbnail__portfolio">
-                                    <a class="image-wrap" href="{% static 'assets/img/projects/project-1.jpg' %}" data-gal="magnific-pop-up[image]" title="Image project"><img class="img-fluid" src="{% static 'assets/img/projects/project-1.jpg' %}" alt="Image Project" /><span class="zoom-icon"></span></a>
+                                    <a class="image-wrap" href="{{portfolio.image.url}}" data-gal="magnific-pop-up[image]" title="Image project"><img class="img-fluid" src="{{portfolio.image.url}}" alt="Image Project" /><span class="zoom-icon"></span></a>
                                 </figure>
                                 <!-- Thumbnail Ends -->
                                 <!-- Caption Starts -->
                                 <div class="caption">
-                                    <h3>Single Image</h3>
-                                    <p>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
+                                    <h3>{{portfolio.title}}</h3>
+                                    <p>{{portfolio.description}}</p>
                                 </div>
                                 <!-- Caption Ends -->
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 filtr-item" data-category="2">
-                            <div class="magnific-popup-gallery">
-                                <!-- Thumbnail Starts -->
-                                <figure class="thumbnail thumbnail__portfolio">
-                                    <a class="image-wrap mfp-youtube" href="https://www.youtube.com/watch?v=0gv7OC9L2s8"><img class="img-fluid" src="{% static 'assets/img/projects/project-2.jpg' %}" alt="Gallery project" /><span class="zoom-icon video-icon"></span></a>
-                                </figure>
-                                <!-- Thumbnail Ends -->
-                                <!-- Caption Starts -->
-                                <div class="caption">
-                                    <h3>Youtube Video</h3>
-                                    <p>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
-                                </div>
-                                <!-- Caption Ends -->
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 filtr-item" data-category="1">
-                            <div class="magnific-popup-gallery">
-                                <!-- Thumbnail Starts -->
-                                <figure class="thumbnail thumbnail__portfolio">
-                                    <a class="image-wrap" href="{% static 'assets/img/projects/project-3.jpg' %}" data-gal="magnific-pop-up[gallery]" title="Gallery project"><img class="img-fluid" src="{% static 'assets/img/projects/project-3.jpg' %}" alt="Gallery project" /><span class="zoom-icon gallery-icon"></span></a>
-                                </figure>
-                                <a href="{% static 'assets/img/projects/project-1.jpg' %}" title="Gallery project" data-gal="magnific-pop-up[gallery]" style="display:none;"></a>
-                                <a href="{% static 'assets/img/projects/project-2.jpg' %}" title="Gallery project" data-gal="magnific-pop-up[gallery]" style="display:none;"></a>
-                                <a href="{% static 'assets/img/projects/project-3.jpg' %}" title="Gallery project" data-gal="magnific-pop-up[gallery]" style="display:none;"></a>
-                                <a href="{% static 'assets/img/projects/project-4.jpg' %}" title="Gallery project" data-gal="magnific-pop-up[gallery]" style="display:none;"></a>
-                                <a href="{% static 'assets/img/projects/project-5.jpg' %}" title="Gallery project" data-gal="magnific-pop-up[gallery]" style="display:none;"></a>
-                                <a href="{% static 'assets/img/projects/project-6.jpg' %}" title="Gallery project" data-gal="magnific-pop-up[gallery]" style="display:none;"></a>
-                                <!-- Thumbnail Ends -->
-                                <!-- Caption Starts -->
-                                <div class="caption">
-                                    <h3>Gallery Photos</h3>
-                                    <p>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
-                                </div>
-                                <!-- Caption Ends -->
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 filtr-item" data-category="3">
-                            <div class="magnific-popup-gallery">
-                                <!-- Thumbnail Starts -->
-                                <figure class="thumbnail thumbnail__portfolio">
-                                    <a class="image-wrap" href="#" title="portfolio"><img class="img-fluid" src="{% static 'assets/img/projects/project-4.jpg' %}" alt="portfolio" /><span class="zoom-icon external-icon"></span></a>
-                                </figure>
-                                <!-- Thumbnail Ends -->
-                                <!-- Caption Starts -->
-                                <div class="caption">
-                                    <h3>External Link</h3>
-                                    <p>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
-                                </div>
-                                <!-- Caption Ends -->
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 filtr-item" data-category="1">
-                            <div class="magnific-popup-gallery">
-                                <!-- Thumbnail Starts -->
-                                <figure class="thumbnail thumbnail__portfolio">
-                                    <a class="image-wrap" href="{% static 'assets/img/projects/project-5.jpg' %}" data-gal="magnific-pop-up[image]" title="Image project"><img class="img-fluid" src="{% static 'assets/img/projects/project-5.jpg' %}" alt="Image Project" /><span class="zoom-icon"></span></a>
-                                </figure>
-                                <!-- Thumbnail Ends -->
-                                <!-- Caption Starts -->
-                                <div class="caption">
-                                    <h3>Single Image</h3>
-                                    <p>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
-                                </div>
-                                <!-- Caption Ends -->
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 filtr-item" data-category="2">
-                            <div class="magnific-popup-gallery">
-                                <!-- Thumbnail Starts -->
-                                <figure class="thumbnail thumbnail__portfolio">
-                                    <a class="image-wrap mfp-youtube" href="https://www.youtube.com/watch?v=O_C5CN1L3Xo"><img class="img-fluid" src="{% static 'assets/img/projects/project-6.jpg' %}" alt="Gallery project" /><span class="zoom-icon video-icon"></span></a>
-                                </figure>
-                                <!-- Thumbnail Ends -->
-                                <!-- Caption Starts -->
-                                <div class="caption">
-                                    <h3>Youtube Video</h3>
-                                    <p>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
-                                </div>
-                                <!-- Caption Ends -->
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 filtr-item" data-category="1">
-                            <div class="magnific-popup-gallery">
-                                <!-- Thumbnail Starts -->
-                                <figure class="thumbnail thumbnail__portfolio">
-                                    <a class="image-wrap" href="{% static 'assets/img/projects/project-7.jpg' %}" data-gal="magnific-pop-up[image]" title="Image project"><img class="img-fluid" src="{% static 'assets/img/projects/project-7.jpg' %}" alt="Image Project" /><span class="zoom-icon"></span></a>
-                                </figure>
-                                <!-- Thumbnail Ends -->
-                                <!-- Caption Starts -->
-                                <div class="caption">
-                                    <h3>Single Image</h3>
-                                    <p>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
-                                </div>
-                                <!-- Caption Ends -->
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 filtr-item" data-category="2">
-                            <div class="magnific-popup-gallery">
-                                <!-- Thumbnail Starts -->
-                                <figure class="thumbnail thumbnail__portfolio">
-                                    <a class="image-wrap mfp-vimeo" href="https://vimeo.com/23534361"><img class="img-fluid" src="{% static 'assets/img/projects/project-8.jpg' %}" alt="Gallery project" /><span class="zoom-icon video-icon"></span></a>
-                                </figure>
-                                <!-- Thumbnail Ends -->
-                                <!-- Caption Starts -->
-                                <div class="caption">
-                                    <h3>Vimeo Video</h3>
-                                    <p>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
-                                </div>
-                                <!-- Caption Ends -->
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 filtr-item" data-category="1">
-                            <div class="magnific-popup-gallery">
-                                <!-- Thumbnail Starts -->
-                                <figure class="thumbnail thumbnail__portfolio">
-                                    <a class="image-wrap" href="{% static 'assets/img/projects/project-9.jpg' %}" data-gal="magnific-pop-up[image]" title="Image project"><img class="img-fluid" src="{% static 'assets/img/projects/project-9.jpg' %}" alt="Image Project" /><span class="zoom-icon"></span></a>
-                                </figure>
-                                <!-- Thumbnail Ends -->
-                                <!-- Caption Starts -->
-                                <div class="caption">
-                                    <h3>Single Image</h3>
-                                    <p>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
-                                </div>
-                                <!-- Caption Ends -->
-                            </div>
-                        </div>
+                        {% endfor %}
+                        
                     </div>
                 </div>
             </div>
@@ -661,7 +491,7 @@
                     <!-- Main Heading Starts -->
                     <div class="text-center top-text">
                         <h1><span>Факты</span></h1>
-                        <h4>our numbers</h4>
+                        <h4>Наши номера</h4>
                     </div>
                     <!-- Main Heading Starts -->
                     <!-- Fact Badges Starts -->
@@ -671,7 +501,7 @@
                             <div class="col-md-3 col-sm-6">
                                 <i class="fa fa-briefcase"></i>
                                 <h2>
-                                    <span><strong class="badges-counter">77</strong>+</span>
+                                    <span><strong class="badges-counter">{{facts.project}}</strong>+</span>
                                 </h2>
                                 <h4>Проекты</h4>
                             </div>
@@ -680,7 +510,7 @@
                             <div class="col-md-3 col-sm-6">
                                 <i class="fa fa-clock-o"></i>
                                 <h2>
-                                    <span><strong class="badges-counter">80</strong>+</span>
+                                    <span><strong class="badges-counter">{{facts.home_work}}</strong>+</span>
                                 </h2>
                                 <h4>Работа дома</h4>
                             </div>
@@ -689,7 +519,7 @@
                             <div class="col-md-3 col-sm-6">
                                 <i class="fa fa-home"></i>
                                 <h2>
-                                    <span><strong class="badges-counter">18</strong>+</span>
+                                    <span><strong class="badges-counter">{{facts.office}}</strong>+</span>
                                 </h2>
                                 <h4>Офис</h4>
                             </div>
@@ -698,7 +528,7 @@
                             <div class="col-md-3 col-sm-6">
                                 <i class="fa fa-user"></i>
                                 <h2>
-                                    <span><strong class="badges-counter">67</strong>+</span>
+                                    <span><strong class="badges-counter">{{facts.customs}}</strong>+</span>
                                 </h2>
                                 <h4>Клиенты</h4>
                             </div>
@@ -717,7 +547,7 @@
             <div class="container">
                 <!-- Main Heading Starts -->
                 <div class="text-center top-text">
-                    <h1><span>Наша</span> Команда</h1>
+                    <h1><span>Наша</span> семья</h1>
                     <h4>Поддерживать Связь</h4>
                 </div>
                 <!-- Main Heading Ends -->
@@ -734,12 +564,12 @@
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="team-member">
                             <!-- Team Member Picture Starts -->
-                            <a title="Maryana Mori // Manager" href="{% static 'assets/img/team/member1.jpg' %}" data-gal="magnific-pop-up[team]" class="team-member-img-wrap"><img src="{% static 'assets/img/team/member1.jpg' %}" alt="team member"></a>
+                            <a title="Maryana Mori // Manager" href="{{team.image1.url}}" data-gal="magnific-pop-up[team]" class="team-member-img-wrap"><img src="{{team.image1.url}}" alt="team member"></a>
                             <!-- Team Member Picture Ends -->
                             <!-- Team Member Details Starts -->
                             <div class="team-member-caption social-icons">
-                                <h4>Maryana Mori</h4>
-                                <p>Manager</p>
+                                <h4>{{team.name1}}</h4>
+                                <p>{{team.description1}}</p>
                                 <ul class="list list-inline social">
                                     <li>
                                         <a href="#" class="fa fa-facebook"></a>
@@ -760,12 +590,12 @@
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="team-member">
                             <!-- Team Member Picture Starts -->
-                            <a title="Marco Verratti // Co Founder" href="{% static 'assets/img/team/member2.jpg' %}" data-gal="magnific-pop-up[team]" class="team-member-img-wrap"><img src="{% static 'assets/img/team/member2.jpg' %}" alt="team member"></a>
+                            <a title="Marco Verratti // Co Founder" href="{{team.image2.url}}" data-gal="magnific-pop-up[team]" class="team-member-img-wrap"><img src="{{team.image2.url}}" alt="team member"></a>
                             <!-- Team Member Picture Ends -->
                             <!-- Team Member Details Starts -->
                             <div class="team-member-caption social-icons">
-                                <h4>Marco Verratti</h4>
-                                <p>Co Founder</p>
+                                <h4>{{team.name2}}</h4>
+                                <p>{{team.description2}}</p>
                                 <ul class="list list-inline social">
                                     <li>
                                         <a href="#" class="fa fa-facebook"></a>
@@ -787,12 +617,12 @@
                         <!-- Team Member-->
                         <div class="team-member">
                             <!-- Team Member Picture Starts -->
-                            <a title="Emilia Bella // Sales Manager" href="{% static 'assets/img/team/member3.jpg' %}" data-gal="magnific-pop-up[team]" class="team-member-img-wrap"><img src="{% static 'assets/img/team/member3.jpg' %}" alt=""></a>
+                            <a title="Emilia Bella // Sales Manager" href="{{team.image3.url}}" data-gal="magnific-pop-up[team]" class="team-member-img-wrap"><img src="{{team.image3.url}}" alt=""></a>
                             <!-- Team Member Picture Ends -->
                             <!-- Team Member Details Starts -->
                             <div class="team-member-caption social-icons">
-                                <h4>Emilia Bella</h4>
-                                <p>Sales Manager</p>
+                                <h4>{{team.name3}}</h4>
+                                <p>{{team.description3}}</p>
                                 <ul class="list list-inline social">
                                     <li>
                                         <a href="#" class="fa fa-facebook"></a>
@@ -813,12 +643,12 @@
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="team-member">
                             <!-- Team Member Picture Starts -->
-                            <a title="Antonio Conte // Director" href="{% static 'assets/img/team/member4.jpg' %}" data-gal="magnific-pop-up[team]" class="team-member-img-wrap"><img src="{% static 'assets/img/team/member4.jpg' %}" alt="team member"></a>
+                            <a title="Antonio Conte // Director" href="{{team.image4.url}}" data-gal="magnific-pop-up[team]" class="team-member-img-wrap"><img src="{{team.image4.url}}" alt="team member"></a>
                             <!-- Team Member Picture Ends -->
                             <!-- Team Member Details Starts -->
                             <div class="team-member-caption social-icons">
-                                <h4>Antonio Conte</h4>
-                                <p>Director</p>
+                                <h4>{{team.name4}}</h4>
+                                <p>{{team.description4}}</p>
                                 <ul class="list list-inline social">
                                     <li>
                                         <a href="#" class="fa fa-facebook"></a>
@@ -896,79 +726,37 @@
                 <!-- Divider Ends -->
                 <div class="row latest-posts-content">
                     <!-- Article Starts -->
+                    {% for post in post %}
                     <div class="col-sm-12 col-md-4 col-xs-12">
                         <div class="latest-post">
                             <!-- Featured Image Starts -->
-                            <a class="img-thumb" href="blog-post.html"><img class="img-fluid" src="{% static 'assets/img/blog/blog-post-small-1.jpg' %}" alt="img"></a>
+                            <a class="img-thumb" href="blog-post.html"><img class="img-fluid" src="{{post.image.url}}" alt="img"></a>
                             <!-- Featured Image Ends -->
                             <!-- Article Content Starts -->
                             <div class="post-body">
                                 <h4 class="post-title">
-                                    <a href="blog-post.html">how to be a good freelancer ?</a>
+                                    <a href="blog-post.html">{{post.title}}</a>
                                 </h4>
                                 <div class="post-text">
-                                    <p>incididunt ut labore et dolore magna aliqua. Ut enim aminim veniam, quis nostrud...</p>
+                                    <p>{{post.description}}</p>
                                 </div>
                             </div>
                             <!-- Post Date Starts -->
                             <div class="post-date">
-                                <span>18</span>
-                                <span>AUG</span>
+                                <span>{{post.data}}</span>
+                                <span>{{post.month}}</span>
                             </div>
                             <!-- Post Date Ends -->
                             <!-- Article Content Ends -->
                         </div>
                     </div>
+                    {% endfor %}
                     <!-- Article Ends -->
                     <!-- Article Starts -->
-                    <div class="col-sm-12 col-md-4 col-xs-12">
-                        <div class="latest-post">
-                            <!-- Featured Image Starts -->
-                            <a class="img-thumb" href="blog-post.html"><img class="img-fluid" src="{% static 'assets/img/blog/blog-post-small-2.jpg' %}" alt="img"></a>
-                            <!-- Featured Image Ends -->
-                            <!-- Article Content Starts -->
-                            <div class="post-body">
-                                <h4 class="post-title">
-                                    <a href="blog-post.html">Collaboration with Envato</a>
-                                </h4>
-                                <div class="post-text">
-                                    <p>incididunt ut labore et dolore magna aliqua. Ut enim aminim veniam, quis nostrud...</p>
-                                </div>
-                            </div>
-                            <!-- Post Date Starts -->
-                            <div class="post-date">
-                                <span>23</span>
-                                <span>JUN</span>
-                            </div>
-                            <!-- Post Date Ends -->
-                            <!-- Article Content Ends -->
-                        </div>
-                    </div>
+                    
                     <!-- Article Ends -->
                     <!-- Article Starts -->
-                    <div class="col-sm-12 col-md-4 col-xs-12">
-                        <div class="latest-post">
-                            <!-- Featured Image Starts -->
-                            <a class="img-thumb" href="blog-post.html"><img class="img-fluid" src="{% static 'assets/img/blog/blog-post-small-3.jpg' %}" alt="img"></a>
-                            <!-- Featured Image Ends -->
-                            <!-- Article Content Starts -->
-                            <div class="post-body">
-                                <h4 class="post-title">
-                                    <a href="blog-post.html">why themeforest is best ?</a>
-                                </h4>
-                                <div class="post-text">
-                                    <p>incididunt ut labore et dolore magna aliqua. Ut enim aminim veniam, quis nostrud...</p>
-                                </div>
-                            </div>
-                            <!-- Post Date Starts -->
-                            <div class="post-date">
-                                <span>01</span>
-                                <span>JAN</span>
-                            </div>
-                            <!-- Post Date Ends -->
-                            <!-- Article Content Ends -->
-                        </div>
-                    </div>
+                   
                     <!-- Article Ends -->
 					<div class="mx-auto">
                         <a class="custom-button link-blog" href="blog.html">Все статьи</a>
@@ -990,10 +778,11 @@
                     </div>
                     <!-- Main Heading Ends -->
                     <div class="video-content">
-                        <p class="text-center">We’re developing a number of special projects if interested,<br> Don't hesitate to see the promo video</p>
+                        <p class="text-center">В случае заинтересованности мы разрабатываем ряд специальных проектов,
+                            Не стесняйтесь посмотреть промо-видео</p>
                         <!-- Video Play Starts -->
                         <div class="magnific-popup-gallery">
-                            <div class="btn-wrapper text-center"><a class="image-wrap mfp-youtube" href="https://www.youtube.com/watch?v=0gv7OC9L2s8"></a></div>
+                            <div class="btn-wrapper text-center"><a class="image-wrap mfp-youtube" href="{{youtube.video}}"></a></div>
                         </div>
                         <!-- Video Play Ends -->
                     </div>
@@ -1035,20 +824,20 @@
                     <!-- Left Info Map Box Starts -->
                     <div class="col-md-6 col-sm-12">
                         <div class="info-map-boxes-item fa fa-clock-o">
-                            <h1>Working Hours</h1>
-                            <p>Monday-Thursday : 08:00–17:00
-                                <br>Friday & Saturday : 08:00–12:30
-                                <br>Sunday - Close</p>
+                            <h1>Работа в доме</h1>
+                            <p>{{settings.schedule1}}
+                                <br>{{settings.schedule2}}
+                                <br></p>
                         </div>
                     </div>
                     <!-- Left Info Map Box Ends -->
                     <!-- Right Info Map Box Starts -->
                     <div class="col-md-6 col-sm-12">
                         <div class="info-map-boxes-item fa fa-phone">
-                            <h1>Phone &amp; Online</h1>
-                            <p>Phone : +39 1873 2878
-                                <br>Fax : +49 (0) 123 456789-15
-                                <br><a href="#">salimo@yourdomain.com</a></p>
+                            <h1>Телефон &amp; Онлайн</h1>
+                            <p>{{settings.phone}}
+                                <br>{{settings.fax}}
+                                <br><a href="#">{{settings.email}}</a></p>
                         </div>
                     </div>
                     <!-- Right Info Map Box Ends -->
@@ -1126,19 +915,15 @@
         <!-- Contact Form Section Ends -->
         <!-- Logos Section Starts -->
         <section class="logos">
+            {% for partner in partner%}
             <div class="container">
                 <ul class="bxslider" id="bxslider">
                     <!-- Logos Items Starts -->
-                    <li><img id="3docean" src="{% static 'assets/img/logos-slider/3docean-light-background.png' %}" alt="3docean"></li>
-                    <li><img id="activeden" src="{% static 'assets/img/logos-slider/activeden-light-background.png' %}" alt="activeden"></li>
-                    <li><img id="audiojungle" src="{% static 'assets/img/logos-slider/audiojungle-light-background.png' %}" alt="audiojungle"></li>
-                    <li><img id="codecanyon" src="{% static 'assets/img/logos-slider/codecanyon-light-background.png' %}" alt="codecanyon"></li>
-                    <li><img id="graphicriver" src="{% static 'assets/img/logos-slider/graphicriver-light-background.png' %}" alt="graphicriver"></li>
-                    <li><img id="photodune" src="{% static 'assets/img/logos-slider/photodune-light-background.png' %}" alt="photodune"></li>
-                    <li><img id="themeforest" src="{% static 'assets/img/logos-slider/themeforest-light-background.png' %}" alt="themeforest"></li>
+                    <li><img id="3docean" src="{{partner.image.url}}" alt="3docean"></li>
                     <!-- Logos Items Ends -->
                 </ul>
             </div>
+            {% endfor %}
         </section>
         <!-- Logos Section Ends -->
         <!-- Footer Section Starts -->
