@@ -22,7 +22,7 @@ class Settings(models.Model):
         verbose_name = 'Почта'
     )
     logo = models.ImageField(
-        upload_to='logo/',
+        upload_to='logo',
         verbose_name='Логотип'
     )
     one_page = models.ImageField(
@@ -30,17 +30,16 @@ class Settings(models.Model):
         verbose_name='Вступление'
     )
     def __str__(self):
-        return "настройки"
+        return self.schedule1
     
     class Meta:
         verbose_name = 'Настройка'
         verbose_name_plural = "Настройки"
 
 
-
 class Slide(models.Model):
     name = models.CharField(max_length = 255, 
-    verbose_name = 'Название'
+        verbose_name = 'Название'
     )
     descriptions = models.CharField(
         max_length = 255,
@@ -51,7 +50,7 @@ class Slide(models.Model):
         verbose_name= 'фото_слайд'
     )
     def __str__(self):
-        return f"слайд"
+        return self.name
     
     class Meta:
         verbose_name = 'Слайд'
@@ -75,7 +74,7 @@ class AboutUs(models.Model):
         verbose_name='Фото для About'
     )
     def __str__(self):
-        return f"Описание про нас"
+        return self.descriptions1
 
     class Meta:
         verbose_name = 'Про меня'
@@ -84,10 +83,6 @@ class AboutUs(models.Model):
 
 
 class Managers(models.Model):
-    # back_image = models.ImageField(
-    #     upload_to='back_photo',
-    #     verbose_name='Задний image'
-    # )
     manager_photo = models.ImageField(
         upload_to='manager',
         verbose_name='Фото менеджера'
@@ -99,6 +94,14 @@ class Managers(models.Model):
     description = models.TextField(
         verbose_name = 'Описание'
     )
+ 
+    instagram = models.URLField(
+        verbose_name = "Instagram",
+    )
+   
+    google = models.URLField(
+        verbose_name = 'Google'
+    )
      
     def __str__(self):
         return self.name
@@ -107,28 +110,23 @@ class Managers(models.Model):
         verbose_name = 'Менеджер'
         verbose_name_plural = 'Менеджера'
 
+
 class SocialMedia(models.Model):
-    twitter = models.URLField(
-        verbose_name = 'Twitter'
+    google = models.URLField(
+        verbose_name = 'Google'
     )
     facebook = models.URLField(
         verbose_name = 'Facebook'
     )
-    skype = models.URLField(
-        verbose_name = 'Skype'
-    )
     instagram = models.URLField(
         verbose_name = 'Instagram'
-    )
-    linkedin = models.URLField(
-        verbose_name = 'Linkedin'
     )
     youtube = models.URLField(
         verbose_name = 'Youtube'
     )
 
     def __str__(self):
-        return f" Соц. сети"
+        return self.instagram
     
     class Meta:
         verbose_name = "Соц.сеть"
@@ -153,7 +151,8 @@ class Customs(models.Model):
     )
 
     def __str__(self):
-        return f"Отзывы"
+        return self.name
+    
     class Meta:
         verbose_name = 'Отзыв'
         verbose_name_plural = "Отзывы"
@@ -172,7 +171,7 @@ class Cards(models.Model):
         verbose_name = 'Описание'
     )
     def __str__(self):
-        return f"{self.title}"
+        return self.title
     
     class Meta:
         verbose_name = 'Сервис'
@@ -198,7 +197,7 @@ class Facts(models.Model):
     )
 
     def __str__(self):
-        return f"{self.project}"
+        return self.project
     
     class Meta:
         verbose_name = 'Факт'
@@ -206,57 +205,31 @@ class Facts(models.Model):
 
 
 class Team(models.Model):
-    image1 = models.ImageField(
+    image = models.ImageField(
         upload_to='photo',
         verbose_name='Фото'
     )
-    name1 = models.CharField(
+    name = models.CharField(
         max_length = 255,
         verbose_name = 'Имя'
     )
-    description1 = models.CharField(
+    description = models.CharField(
         max_length = 255,
         verbose_name = 'Описание'
     )
-    image2 = models.ImageField(
-        upload_to='photo',
-        verbose_name='Фото'
+    instagram = models.URLField(
+        verbose_name = "Instagram",
+
     )
-    name2 = models.CharField(
-        max_length = 255,
-        verbose_name = 'Имя'
+    telegram = models.URLField(
+        verbose_name = "telegram"
     )
-    description2 = models.CharField(
-        max_length = 255,
-        verbose_name = 'Описание'
-    )
-    image3 = models.ImageField(
-        upload_to='photo',
-        verbose_name='Фото'
-    )
-    name3 = models.CharField(
-        max_length = 255,
-        verbose_name = 'Имя'
-    )
-    description3 = models.CharField(
-        max_length = 255,
-        verbose_name = 'Описание'
-    )
-    image4 = models.ImageField(
-        upload_to='photo',
-        verbose_name='Фото'
-    )
-    name4 = models.CharField(
-        max_length = 255,
-        verbose_name = 'Имя'
-    )
-    description4 = models.CharField(
-        max_length = 255,
-        verbose_name = 'Описание'
+    google = models.URLField(
+        verbose_name = 'Google'
     )
 
     def __str__(self):
-        return f"Команда"
+        return self.name
     
     class Meta:
         verbose_name = 'Команда'
@@ -273,16 +246,12 @@ class Post(models.Model):
     )
     description = models.TextField(
         verbose_name = 'Описание'
-    )
-    data = models.CharField(
-        max_length = 255,
-        verbose_name = 'Дата'
-    )
-    month = models.CharField(
-        max_length = 255,
-        verbose_name = 'Месяц'
-    )
 
+    )
+    created_at = models.DateTimeField(
+        auto_now_add = True,
+        blank = True,null = True
+    )
     def __str__(self):
         return self.title
     
@@ -329,9 +298,11 @@ class Partner(models.Model):
         upload_to='photo',
         verbose_name='Фото'
     )
-
     def __str__(self):
         return "Партнеры"
+    
     class Meta:
         verbose_name = 'Партнер'
         verbose_name_plural = 'Партнеры'
+
+

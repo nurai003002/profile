@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Blog, Salimo - One Page Parallax</title>
+    <title>Diamond - One Page Parallax</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Google Fonts -->
@@ -42,7 +42,7 @@
     <!-- Preloader Starts -->
     <div class="preloader" id="preloader">
         <div class="logopreloader">
-            <img src="{% static 'assets/img/styleswitcher/logos/yellow.png' %}" alt="logo-black">
+            <img src="{{setting.one_page.url}}"  width = '200px' alt="logo-black">
         </div>
         <div class="loader" id="loader"></div>
     </div>
@@ -50,54 +50,53 @@
     <!-- Live Style Switcher Starts - demo only -->
     <div id="switcher" class="">
         <div class="content-switcher">
-            <h4>STYLE SWITCHER</h4>
+            <h4>Стили</h4>
             <ul>
                 <li>
-                    <a href="#" onclick="setActiveStyleSheet('blue'); document.getElementById('logo-light').src='img/styleswitcher/logos/blue.png'; document.getElementById('logo-dark').src='img/styleswitcher/logos/logos-dark/blue.png';" title="blue" class="color"><img src="{% static 'assets/img/styleswitcher/blue.png' %}" alt="" width="30" height="30" /></a>
+                    <a href="#" onclick="setActiveStyleSheet('blue'); document.getElementById('logo-light')".src='{% static "assets/img/styleswitcher/logos/blue.png" %}'; document.getElementById('logo-dark'). src='{% static "assets/img/styleswitcher/logos/logos-dark/blue.png" %}'; title="blue" class="color"><img src="{% static 'assets/img/styleswitcher/blue.png' %}" alt="" width="30" height="30" /></a>
+                </li> 
+                <li>
+                    <a href="#" onclick="setActiveStyleSheet('blueviolet'); document.getElementById('logo-light')".src='{% static "assets/img/styleswitcher/logos/blueviolet.png" %}'; document.getElementById('logo-dark'). src='{% static "assets/img/styleswitcher/logos/logos-dark/blueviolet.png" %}'; title="blueviolet" class="color"><img src="{% static 'assets/img/styleswitcher/blueviolet.png' %}" alt="" width="30" height="30" /></a>
                 </li>
                 <li>
-                    <a href="#" onclick="setActiveStyleSheet('blueviolet'); document.getElementById('logo-light').src='img/styleswitcher/logos/blueviolet.png'; document.getElementById('logo-dark').src='img/styleswitcher/logos/logos-dark/blueviolet.png';" title="blueviolet" class="color"><img src="{% static 'assets/img/styleswitcher/blueviolet.png' %}" alt="" width="30" height="30" /></a>
+                    <a href="#" onclick="setActiveStyleSheet('goldenrod'); document.getElementById('logo-light')".src='{% static "assets/img/styleswitcher/logos/goldenrod.png" %}'; document.getElementById('logo-dark') .src='{% static "assets/img/styleswitcher/logos/logos-dark/goldenrod.png" %}'; title="goldenrod" class="color"><img src="{% static 'assets/img/styleswitcher/goldenrod.png' %}" alt="" width="30" height="30" /></a>
                 </li>
                 <li>
-                    <a href="#" onclick="setActiveStyleSheet('goldenrod'); document.getElementById('logo-light').src='img/styleswitcher/logos/goldenrod.png'; document.getElementById('logo-dark').src='img/styleswitcher/logos/logos-dark/goldenrod.png';" title="goldenrod" class="color"><img src="{% static 'assets/img/styleswitcher/goldenrod.png' %}" alt="" width="30" height="30" /></a>
+                    <a href="#" onclick="setActiveStyleSheet('green'); document.getElementById('logo-light')".src='{% static "assets/img/styleswitcher/logos/green.png" %}'; document.getElementById('logo-dark') .src='{% static "assets/img/styleswitcher/logos/logos-dark/green.png" %}'; title="green" class="color"><img src="{% static 'assets/img/styleswitcher/green.png' %}" alt="" width="30" height="30" /></a>
                 </li>
                 <li>
-                    <a href="#" onclick="setActiveStyleSheet('green'); document.getElementById('logo-light').src='img/styleswitcher/logos/green.png'; document.getElementById('logo-dark').src='img/styleswitcher/logos/logos-dark/green.png';" title="green" class="color"><img src="{% static 'assets/img/styleswitcher/green.png' %}" alt="" width="30" height="30" /></a>
+                    <a href="#" onclick="setActiveStyleSheet('magenta'); document.getElementById('logo-light')".src='{% static "assets/img/styleswitcher/logos/magenta.png" %}'; document.getElementById('logo-dark') .src='{% static "assets/img/styleswitcher/logos/logos-dark/magenta.png" %}'; title="magenta" class="color"><img src="{% static 'assets/img/styleswitcher/magenta.png' %}" alt="" width="30" height="30" /></a>
                 </li>
                 <li>
-                    <a href="#" onclick="setActiveStyleSheet('magenta'); document.getElementById('logo-light').src='img/styleswitcher/logos/magenta.png'; document.getElementById('logo-dark').src='img/styleswitcher/logos/logos-dark/magenta.png';" title="magenta" class="color"><img src="{% static 'assets/img/styleswitcher/magenta.png' %}" alt="" width="30" height="30" /></a>
+                    <a href="#" onclick="setActiveStyleSheet('orange'); document.getElementById('logo-light')".src='{% static "assets/img/styleswitcher/logos/orange.png" %}'; document.getElementById('logo-dark') .src='{% static "assets/img/styleswitcher/logos/logos-dark/orange.png" %}'; title="orange" class="color"><img src="{% static 'assets/img/styleswitcher/orange.png' %}" alt="" width="30" height="30" /></a>
                 </li>
                 <li>
-                    <a href="#" onclick="setActiveStyleSheet('orange'); document.getElementById('logo-light').src='img/styleswitcher/logos/orange.png'; document.getElementById('logo-dark').src='img/styleswitcher/logos/logos-dark/orange.png';" title="orange" class="color"><img src="{% static 'assets/img/styleswitcher/orange.png' %}" alt="" width="30" height="30" /></a>
+                    <a href="#" onclick="setActiveStyleSheet('purple'); document.getElementById('logo-light')".src='{% static "assets/img/styleswitcher/logos/purple.png" %}'; document.getElementById('logo-dark') .src='{% static "assets/img/styleswitcher/logos/logos-dark/purple.png" %}'; title="purple" class="color"><img src="{% static 'assets/img/styleswitcher/purple.png' %}" alt="" width="30" height="30" /></a>
                 </li>
                 <li>
-                    <a href="#" onclick="setActiveStyleSheet('purple'); document.getElementById('logo-light').src='img/styleswitcher/logos/purple.png'; document.getElementById('logo-dark').src='img/styleswitcher/logos/logos-dark/purple.png';" title="purple" class="color"><img src="{% static 'assets/img/styleswitcher/purple.png' %}" alt="" width="30" height="30" /></a>
+                    <a href="#" onclick="setActiveStyleSheet('red'); document.getElementById('logo-light')".src='{% static "assets/img/styleswitcher/logos/red.png" %}'; document.getElementById('logo-dark') .src='{% static "assets/img/styleswitcher/logos/logos-dark/red.png" %}'; title="red" class="color"><img src="{% static 'assets/img/styleswitcher/red.png' %}" alt="" width="30" height="30" /></a>
+                </li>x
+                <li>
+                    <a href="#" onclick="setActiveStyleSheet('yellow'); document.getElementById('logo-light')".src='{% static "assets/img/styleswitcher/logos/yellow.png" %}'; document.getElementById('logo-dark') .src='{% static "assets/img/styleswitcher/logos/logos-dark/yellow.png" %}'; title="yellow" class="color"><img src="{% static 'assets/img/styleswitcher/yellow.png' %}" alt="" width="30" height="30" /></a>
                 </li>
                 <li>
-                    <a href="#" onclick="setActiveStyleSheet('red'); document.getElementById('logo-light').src='img/styleswitcher/logos/red.png'; document.getElementById('logo-dark').src='img/styleswitcher/logos/logos-dark/red.png';" title="red" class="color"><img src="{% static 'assets/img/styleswitcher/red.png' %}" alt="" width="30" height="30" /></a>
-                </li>
-                <li>
-                    <a href="#" onclick="setActiveStyleSheet('yellow'); document.getElementById('logo-light').src='img/styleswitcher/logos/yellow.png'; document.getElementById('logo-dark').src='img/styleswitcher/logos/logos-dark/yellow.png';" title="yellow" class="color"><img src="{% static 'assets/img/styleswitcher/yellow.png' %}" alt="" width="30" height="30" /></a>
-                </li>
-                <li>
-                    <a href="#" onclick="setActiveStyleSheet('yellowgreen'); document.getElementById('logo-light').src='img/styleswitcher/logos/yellowgreen.png'; document.getElementById('logo-dark').src='img/styleswitcher/logos/logos-dark/yellowgreen.png';" title="yellowgreen" class="color"><img src="{% static 'assets/img/styleswitcher/yellowgreen.png' %}" alt="" width="30" height="30" /></a>
+                    <a href="#" onclick="setActiveStyleSheet('yellowgreen'); document.getElementById('logo-light')".src='{% static "assets/img/styleswitcher/logos/yellowgreen.png" %}'; document.getElementById('logo-dark') .src='{% static "assets/img/styleswitcher/logos/logos-dark/yellowgreen.png" %}'; title="yellowgreen" class="color"><img src="{% static 'assets/img/styleswitcher/yellowgreen.png' %}" alt="" width="30" height="30" /></a>
                 </li>
             </ul>
+            <p>Скины</p>
 
-            <p>BODY SKIN</p>
-
-            <label><input class="dark_switch" type="radio" name="color_style" id="is_light" value="light" checked="checked" /> Light</label>
-            <label><input class="dark_switch" type="radio" name="color_style" id="is_dark" value="dark" /> Dark</label>
-
-            <hr />
-
-            <p>LAYOUT STYLE</p>
-            <label><input class="boxed_switch" type="radio" name="layout_style" id="is_wide" value="wide" checked="checked" /> Wide</label>
-            <label><input class="boxed_switch" type="radio" name="layout_style" id="is_boxed" value="boxed" /> Boxed</label>
+            <label><input class="dark_switch" type="radio" name="color_style" id="is_dark" value="dark"checked="checked" /> Темный</label>     
+            <label><input class="dark_switch" type="radio" name="color_style" id="is_light" value="light"  /> Яркий</label>
 
             <hr />
 
-            <p class="separator">SEPARATOR <span class="hot">HOT</span></p>
+            <p>СТИЛЬ МАКЕТА	</p>
+            <label><input class="boxed_switch" type="radio" name="layout_style" id="is_wide" value="wide" checked="checked" /> широкий</label>
+            <label><input class="boxed_switch" type="radio" name="layout_style" id="is_boxed" value="boxed" /> В упаковке</label>
+
+            <hr />
+
+            <p class="separator">РАЗДЕЛИТЕЛЬ <span class="hot"></span></p>
             <span class="info">Select and scroll to see the changes</span>
             <label><input class="separator_switch" type="radio" name="separator_style" id="is_normal" value="normal"  /> <img alt="separator" width="20" height="20" src="{% static 'assets/img/styleswitcher/separators/1.jpg' %}" /></label>
             <label><input class="separator_switch" type="radio" name="separator_style" id="is_skew" value="skew" /> <img alt="separator" width="20" height="20" src="{% static 'assets/img/styleswitcher/separators/2.jpg' %}" /></label>
@@ -123,12 +122,12 @@
                 <nav class="navbar navbar-expand-lg p-0" id="singlepage-nav">
 					<!-- Logo Starts -->
                     <div class="logo">
-                        <a class="navbar-brand link-menu nav-external" href="index-slideshow.html">
+                        <a class="navbar-brand link-menu nav-external" href="{% url 'index' %}">
                             <!-- Logo White Starts -->
-                            <img id="logo-light" class="logo-light" src="{% static 'assets/img/styleswitcher/logos/yellow.png' %}" alt="logo-light" />
+                            <img id="logo-light" class="logo-light" src="{{setting.logo.url}}" alt="logo-light" />
                             <!-- Logo White Ends -->
                             <!-- Logo Black Starts -->
-                            <img id="logo-dark" class="logo-dark" src="{% static 'assets/img/styleswitcher/logos/logos-dark/yellow.png' %}" alt="logo-dark" />
+                            <img id="logo-dark" class="logo-dark" src="{{setting.logo.url}}" alt="logo-dark" />
                             <!-- Logo Black Ends -->
                         </a>
                     </div>
@@ -146,7 +145,7 @@
 					<!-- Navigation Menu Starts -->
                     <div class="collapse navbar-collapse nav-menu" id="navbarSupportedContent">
                         <ul class="nav-menu-inner ml-auto">
-                            <li><a class="link-menu nav-external" href="index-slideshow.html"><i class="fa fa-arrow-left"></i> Back To One Page</a></li>
+                            <li><a class="link-menu nav-external" href="{% url 'index' %}"><i class="fa fa-arrow-left"></i> Главная</a></li>
                         </ul>
                     </div>
 					<!-- Navigation Menu Ends -->
@@ -160,14 +159,14 @@
 				<div class="text-center top-text">
                     <!-- Main Heading Starts -->
 					<div class="text-center top-text">
-						<h1>blog posts</h1>
+						<h1>Новости</h1>
 					</div> 
 					<!-- Main Heading Ends -->
 					<hr>
                     <!-- Breadcrumb Starts -->
 					<ul class="breadcrumb">
-						<li><a href="index-kenburns.html"> home</a></li>
-						<li>blog</li>
+						<li><a href="{% url 'index' %}"> Home</a></li>
+						<li>Blog</li>
 					</ul>
 					<!-- Breadcrumb Ends -->
                 </div>
@@ -180,79 +179,31 @@
 				<div class="row">
 					<div class="content col-xs-12 col-md-8">
 						<!-- Article Starts -->
+						{% for blog1 in blog1 %}
 						<article>
-							<a href="blog-post.html"><h4>How to be a good freelancer?</h4></a>
+							<a href="{% url 'blog_detail' blog1.id}"><h4>{{blog1.title}}</h4></a>
 							<!-- Figure Starts -->
 							<figure>
-								<a href="blog-post.html">
-									<img class="img-responsive" src="{% static 'assets/img/blog/blog-post-1.jpg' %}" alt="">
+								<a href="{% url 'blog_detail' blog1.id}">
+									<img class="img-responsive" src="{{blog1.image.url}}"  style="max-width:400px;">
 								</a>
 							</figure>
 							<!-- Figure Ends -->
 							<!-- Excerpt Starts -->
-							<p class="excerpt-blog">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ...</p>
+							<p class="excerpt-blog">{{blog1.description|truncatechars:50}}</p>
 							<!-- Excerpt Ends -->
-							<a class="custom-button" href="blog-post.html">Read more</a>
+							<a class="custom-button" href="{% url 'blog_detail' blog1.id%}">Подробнее</a>
 							<!-- Meta Starts -->
 							<div class="meta">
 								<span><i class="fa fa-user"></i> <a href="#">admin</a></span>
-								<span><i class="fa fa-calendar"></i> 9 November 2017</span>
+								<span><i class="fa fa-calendar"></i>{{blog1.created_at}}</span>
 								<span><i class="fa fa-commenting"></i> <a href="blog-post.html">18 comments</a></span>
 								<span><i class="fa fa-tags"></i> freelance, market</span>
 								<span><i class="fa fa-link"></i> <a href="blog-post.html">permalink</a></span>
 							</div>
 							<!-- Meta Ends -->
 						</article>
-						<!-- Article Ends -->
-						<!-- Article Starts -->
-						<article>
-							<a href="blog-post.html"><h4>collaboration with envato</h4></a>
-							<!-- Figure Starts -->
-							<figure>
-								<a href="blog-post.html">
-									<img class="img-responsive" src="{% static 'assets/img/blog/blog-post-2.jpg' %}" alt="">
-								</a>
-							</figure>
-							<!-- Figure Ends -->
-							<!-- Excerpt Starts -->
-							<p class="excerpt-blog">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ...</p>
-							<!-- Excerpt Ends -->
-							<a class="custom-button" href="blog-post.html">Read more</a>
-							<!-- Meta Starts -->
-							<div class="meta">
-								<span><i class="fa fa-user"></i> <a href="#">admin</a></span>
-								<span><i class="fa fa-calendar"></i> 11 October 2017</span>
-								<span><i class="fa fa-commenting"></i> <a href="blog-post.html">29 comments</a></span>
-								<span><i class="fa fa-tags"></i> success, life</span>
-								<span><i class="fa fa-link"></i> <a href="blog-post.html">permalink</a></span>
-							</div>
-							<!-- Meta Ends -->
-						</article>
-						<!-- Article Ends -->
-						<!-- Article Starts -->
-						<article>
-							<a href="blog-post.html"><h4>why themeforest is the best?</h4></a>
-							<!-- Figure Starts -->
-							<figure>
-								<a href="blog-post.html">
-									<img class="img-responsive" src="{% static 'assets/img/blog/blog-post-3.jpg' %}" alt="">
-								</a>
-							</figure>
-							<!-- Figure Ends -->
-							<!-- Excerpt Starts -->
-							<p class="excerpt-blog">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ...</p>
-							<!-- Excerpt Ends -->
-							<a class="custom-button" href="blog-post.html">Read more</a>
-							<!-- Meta Starts -->
-							<div class="meta">
-								<span><i class="fa fa-user"></i> <a href="#">admin</a></span>
-								<span><i class="fa fa-calendar"></i> 11 October 2017</span>
-								<span><i class="fa fa-commenting"></i> <a href="blog-post.html">29 comments</a></span>
-								<span><i class="fa fa-tags"></i> themeforest, envato</span>
-								<span><i class="fa fa-link"></i> <a href="blog-post.html">permalink</a></span>
-							</div>
-							<!-- Meta Ends -->
-						</article>
+						{% endfor %}
 						<!-- Article Ends -->
 						<nav class="col-xs-12 text-center" aria-label="Page navigation">
 						  <ul class="pagination">
@@ -387,34 +338,25 @@
             <!-- Container Starts -->
             <div class="container">
                 <!-- Copyright Text Starts -->
-                <p>Salimo - One Page Parallax</p>
+                <p>Diamond - One Page Parallax</p>
                 <p>
-                    &copy; Copyright 2016 Salimo & Designed with <span class="heart">&#10084;</span> by <a target="_blank" href="http://themeforest.net/user/celtano/">Celtano</a>
+                    &copy; Copyright 2016 Diamond & Designed with <span class="heart">&#10084;</span> by <a target="_blank" href="http://themeforest.net/user/celtano/">Celtano</a>
                 </p>
                 <!-- Copyright Text Ends -->
                 <!-- Social Media Links Starts -->
                 <div class="social-icons">
                     <ul class="social">
-                        <li>
-                            <a class="twitter" href="#" title="twitter"></a>
+						<li>
+							<a class="facebook" href="{{socia.facebook}}" title="facebook"></a>
+						</li>
+						<li>
+							<a class="google" href="{{socia.google}}" title="google"></a>
                         </li>
                         <li>
-                            <a class="facebook" href="#" title="facebook"></a>
+                            <a class="instagram" href="{{socia.instagram}}" title="instagram"></a>
                         </li>
                         <li>
-                            <a class="google" href="#" title="google"></a>
-                        </li>
-                        <li>
-                            <a class="skype" href="#" title="skype"></a>
-                        </li>
-                        <li>
-                            <a class="instagram" href="#" title="instagram"></a>
-                        </li>
-                        <li>
-                            <a class="linkedin" href="#" title="linkedin"></a>
-                        </li>
-                        <li>
-                            <a class="youtube" href="#" title="youtube"></a>
+                            <a class="youtube" href="{{socia.youtube}}" title="youtube"></a>
                         </li>
                     </ul>
                 </div>

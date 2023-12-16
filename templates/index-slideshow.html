@@ -47,7 +47,7 @@
     <!-- Preloader Starts -->
     <div class="preloader" id="preloader">
         <div class="logopreloader">
-            <img src="{{settings.one_page.url}}"  width = '200px' alt="logo-black">
+            <img src="{{settings.one_page.url}}" width = '200px' alt="logo-black">
         </div>
         <div class="loader" id="loader"></div>
     </div>
@@ -283,24 +283,14 @@
                             <!-- Social Media Starts -->
                             <div class="social-icons">
                                 <ul class="social">
+                                
                                     <li>
-                                        <a class="twitter" href="#" title="twitter"></a>
+                                        <a class="instagram" href="{{manage.instagram}}" title="instagram"></a>
                                     </li>
                                     <li>
-                                        <a class="facebook" href="#"  title="facebook"></a>
+                                        <a class="google" href="{{manage.google}}" title="google"></a>
                                     </li>
-                                    <li>
-                                        <a class="skype" href="#"  title="skype"></a>
-                                    </li>
-                                    <li>
-                                        <a class="instagram" href="#" title="instagram"></a>
-                                    </li>
-                                    <li>
-                                        <a class="linkedin" href="#" title="linkedin"></a>
-                                    </li>
-                                    <li>
-                                        <a class="youtube" href="#" title="youtube"></a>
-                                    </li>
+                                    
                                 </ul>
                             </div>
                             <!-- Social Media Ends -->
@@ -547,7 +537,7 @@
             <div class="container">
                 <!-- Main Heading Starts -->
                 <div class="text-center top-text">
-                    <h1><span>Наша</span> семья</h1>
+                    <h1><span>Наша</span> Команда <h1>
                     <h4>Поддерживать Связь</h4>
                 </div>
                 <!-- Main Heading Ends -->
@@ -561,21 +551,22 @@
                 <!-- Team Members Starts -->
                 <div class="row team-members magnific-popup-gallery">
                     <!-- Team Member Starts -->
+                    {% for team in team %}
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="team-member">
                             <!-- Team Member Picture Starts -->
-                            <a title="Maryana Mori // Manager" href="{{team.image1.url}}" data-gal="magnific-pop-up[team]" class="team-member-img-wrap"><img src="{{team.image1.url}}" alt="team member"></a>
+                            <a title="Maryana Mori // Manager" href="{{team.image.url}}" data-gal="magnific-pop-up[team]" class="team-member-img-wrap"><img src="{{team.image.url}}" alt="team member"></a>
                             <!-- Team Member Picture Ends -->
                             <!-- Team Member Details Starts -->
                             <div class="team-member-caption social-icons">
-                                <h4>{{team.name1}}</h4>
-                                <p>{{team.description1}}</p>
+                                <h4>{{team.name}}</h4>
+                                <p>{{team.description}}</p>
                                 <ul class="list list-inline social">
                                     <li>
-                                        <a href="#" class="fa fa-facebook"></a>
+                                        <a href="{{team.telegram}}" class="fa fa-telegram"></a>
                                     </li>
                                     <li>
-                                        <a href="#" class="fa fa-twitter"></a>
+                                        <a href="{{team.instagram}}" class="fa fa-instagram"></a>
                                     </li>
                                     <li>
                                         <a href="#" class="fa fa-google-plus"></a>
@@ -585,84 +576,10 @@
                             <!-- Team Member Details Starts -->
                         </div>
                     </div>
+                    {% endfor %}
                     <!-- Team Member Ends -->
                     <!-- Team Member Starts -->
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="team-member">
-                            <!-- Team Member Picture Starts -->
-                            <a title="Marco Verratti // Co Founder" href="{{team.image2.url}}" data-gal="magnific-pop-up[team]" class="team-member-img-wrap"><img src="{{team.image2.url}}" alt="team member"></a>
-                            <!-- Team Member Picture Ends -->
-                            <!-- Team Member Details Starts -->
-                            <div class="team-member-caption social-icons">
-                                <h4>{{team.name2}}</h4>
-                                <p>{{team.description2}}</p>
-                                <ul class="list list-inline social">
-                                    <li>
-                                        <a href="#" class="fa fa-facebook"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="fa fa-twitter"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="fa fa-google-plus"></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Team Member Details Ends -->
-                        </div>
-                    </div>
-                    <!-- Team Member Ends -->
-                    <!-- Team Member Starts -->
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <!-- Team Member-->
-                        <div class="team-member">
-                            <!-- Team Member Picture Starts -->
-                            <a title="Emilia Bella // Sales Manager" href="{{team.image3.url}}" data-gal="magnific-pop-up[team]" class="team-member-img-wrap"><img src="{{team.image3.url}}" alt=""></a>
-                            <!-- Team Member Picture Ends -->
-                            <!-- Team Member Details Starts -->
-                            <div class="team-member-caption social-icons">
-                                <h4>{{team.name3}}</h4>
-                                <p>{{team.description3}}</p>
-                                <ul class="list list-inline social">
-                                    <li>
-                                        <a href="#" class="fa fa-facebook"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="fa fa-twitter"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="fa fa-google-plus"></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Team Member Details Ends -->
-                        </div>
-                    </div>
-                    <!-- Team Member Ends -->
-                    <!-- Team Member Starts -->
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="team-member">
-                            <!-- Team Member Picture Starts -->
-                            <a title="Antonio Conte // Director" href="{{team.image4.url}}" data-gal="magnific-pop-up[team]" class="team-member-img-wrap"><img src="{{team.image4.url}}" alt="team member"></a>
-                            <!-- Team Member Picture Ends -->
-                            <!-- Team Member Details Starts -->
-                            <div class="team-member-caption social-icons">
-                                <h4>{{team.name4}}</h4>
-                                <p>{{team.description4}}</p>
-                                <ul class="list list-inline social">
-                                    <li>
-                                        <a href="#" class="fa fa-facebook"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="fa fa-twitter"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="fa fa-google-plus"></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Team Member Details Ends -->
-                        </div>
+                 
                     </div>
                     <!-- Team Member Ends -->
                 </div>
@@ -683,7 +600,8 @@
                     </div>
                     <!-- Main Heading Ends -->
                     <div class="newsletter-content">
-                        <p class="text-center">Sign up to our newsletter subscription and be the first to know about<br> Important news <span> & </span> Amazing offers <span> & </span>Discounts</p>
+                        <p class="text-center">Подпишитесь на нашу рассылку новостей и узнавайте о новостях первыми
+                            Важные новости, выгодные предложения и скидки <span> </span>  <span> & </span></p>
                         <!-- Newsletter Form Starts -->
                         <form class="form-inputs">
                             <!-- Newsletter Form Input Field Starts -->
@@ -697,7 +615,7 @@
                             </div>
                             <!-- Newsletter Form Input Field Ends -->
                             <!-- Newsletter Form Submit Button Starts -->
-                            <button id="submit" name="submit" type="submit" class="custom-button" title="Send">Subscribe Now</button>
+                            <button id="submit" name="submit" type="submit" class="custom-button" title="Send">Подписаться</button>
                             <!-- Newsletter Form Submit Button Ends -->
                         </form>
                         <!-- Newsletter Form Ends -->
@@ -730,21 +648,21 @@
                     <div class="col-sm-12 col-md-4 col-xs-12">
                         <div class="latest-post">
                             <!-- Featured Image Starts -->
-                            <a class="img-thumb" href="blog-post.html"><img class="img-fluid" src="{{post.image.url}}" alt="img"></a>
+                            <a class="img-thumb" href="{% url 'blog_detail' post.id%}"><img class="img-fluid" src="{{post.image.url}}" alt="img"></a>
                             <!-- Featured Image Ends -->
                             <!-- Article Content Starts -->
                             <div class="post-body">
                                 <h4 class="post-title">
-                                    <a href="blog-post.html">{{post.title}}</a>
+                                    <a href="   ">{{post.title}}</a>
                                 </h4>
                                 <div class="post-text">
-                                    <p>{{post.description}}</p>
+                                    <p>{{post.description|truncatechars:50}}</p>
                                 </div>
                             </div>
                             <!-- Post Date Starts -->
                             <div class="post-date">
-                                <span>{{post.data}}</span>
-                                <span>{{post.month}}</span>
+                                <span>{{post.created_at}}</span>
+                                
                             </div>
                             <!-- Post Date Ends -->
                             <!-- Article Content Ends -->
@@ -759,7 +677,7 @@
                    
                     <!-- Article Ends -->
 					<div class="mx-auto">
-                        <a class="custom-button link-blog" href="blog.html">Все статьи</a>
+                        <a class="custom-button link-blog" href="{% url 'blog_news' %}">Все статьи</a>
                     </div>
                 </div>
                 <!-- Latest Blog Posts Ends -->
@@ -933,32 +851,25 @@
                 <!-- Copyright Text Starts -->
                 <p>Diamond - One Page Parallax</p>
                 <p>
-                    &copy; Copyright 2017 Salimo & Designed with <span class="heart">&#10084;</span> by <a target="_blank" href="http://themeforest.net/user/celtano/">Celtano</a>
+                    &copy; Copyright 2017 Diamond & Designed with <span class="heart">&#10084;</span> by <a target="_blank" href="http://themeforest.net/user/celtano/">Celtano</a>
                 </p>
                 <!-- Copyright Text Ends -->
                 <!-- Social Media Links Starts -->
                 <div class="social-icons">
                     <ul class="social">
+                        
                         <li>
-                            <a class="twitter" href="#" title="twitter"></a>
+                            <a class="facebook" href="{{socia.facebook}}" title="facebook"></a>
                         </li>
                         <li>
-                            <a class="facebook" href="#" title="facebook"></a>
+                            <a class="google" href="{{socia.google}}" title="google"></a>
+                        </li>
+                        
+                        <li>
+                            <a class="instagram" href="{{socia.instagram}}" title="instagram"></a>
                         </li>
                         <li>
-                            <a class="google" href="#" title="google"></a>
-                        </li>
-                        <li>
-                            <a class="skype" href="#" title="skype"></a>
-                        </li>
-                        <li>
-                            <a class="instagram" href="#" title="instagram"></a>
-                        </li>
-                        <li>
-                            <a class="linkedin" href="#" title="linkedin"></a>
-                        </li>
-                        <li>
-                            <a class="youtube" href="#" title="youtube"></a>
+                            <a class="youtube" href="{{socia.youtube}}" title="youtube"></a>
                         </li>
                     </ul>
                 </div>
